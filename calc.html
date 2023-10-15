@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="general.css">
+    <script src="script.js"></script>
+  </head>
+  <body style="padding-top: 50px;">
+    <div class="calculator-container">
+      <form>
+        <div class="display-container">
+          <input readonly class="calculator-display" type="text" id="display">
+        </div>
+        <div class="button-row">
+          <input class ="button-clear" type="button" value="AC" onclick="clearDisplay()">
+          <input class ="button-clear" type="button" value="CE" onclick="clearEntry()">
+          <input class ="button-general" type="button" value="+/-" onclick="toggleSign()">
+          <input class ="button-symbol" type="button" value="&divide" onclick="appendToDisplay(' / ')">
+        </div>
+        <div class="button-row">
+          <input class ="button-general" type="button" value="7" onclick="appendToDisplay('7')">
+          <input class ="button-general" type="button" value="8" onclick="appendToDisplay('8')">
+          <input class ="button-general" type="button" value="9" onclick="appendToDisplay('9')">
+          <input class ="button-symbol" type="button" value="x" onclick="appendToDisplay(' * ')">
+        </div>
+        <div class="button-row">
+          <input class ="button-general" type="button" value="6" onclick="appendToDisplay('6')">
+          <input class ="button-general" type="button" value="5" onclick="appendToDisplay('5')">
+          <input class ="button-general" type="button" value="4" onclick="appendToDisplay('4')">
+          <input class ="button-symbol" type="button" value="-" onclick="appendToDisplay(' - ')">
+        </div>
+        <div class="button-row">
+          <input class ="button-general" type="button" value="3" onclick="appendToDisplay('3')">
+          <input class ="button-general" type="button" value="2" onclick="appendToDisplay('2')">
+          <input class ="button-general" type="button" value="1" onclick="appendToDisplay('1')">
+          <input class ="button-symbol" type="button" value="+" onclick="appendToDisplay(' + ')">
+        </div>
+        <div class="button-row">
+          <input class ="button-general" type="button" value="%" onclick="appendToDisplay('%')">
+          <input class ="button-general" type="button" value="0" onclick="appendToDisplay('0')">
+          <input class ="button-general" type="button" value="." onclick="appendToDisplay('.')">
+          <input class ="button-symbol" type="button" value="=" onclick="calculateResult()">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
